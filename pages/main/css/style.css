@@ -18,10 +18,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -56,12 +54,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -69,10 +64,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -89,12 +82,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -112,10 +103,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -165,14 +154,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -180,8 +165,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -190,8 +174,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -240,18 +223,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -274,10 +251,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -293,10 +268,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -311,10 +284,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -495,7 +466,7 @@ a {
 }
 
 .start-screen {
-  background: url("/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url("/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -524,7 +495,10 @@ a {
     height: 22px;
     margin-right: 53px;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     transition: all 0.7s ease-in-out;
     z-index: 10;
   }
@@ -698,7 +672,8 @@ body.lock {
   position: relative;
   display: flex;
   justify-content: left;
-  column-gap: 42px;
+  -moz-column-gap: 42px;
+       column-gap: 42px;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .start_screen__wrapper {
@@ -834,14 +809,14 @@ body.lock {
   left: calc(50% - 349px + 251px);
   bottom: 0px;
   background: transparent;
-  background-image: url("/shelter/assets/images/start-screen-puppy.png");
+  background-image: url("/assets/images/start-screen-puppy.png");
 }
 @media (max-width: 1279px) and (min-width: 1020px) {
   .hero__img {
     position: static;
     width: 569px;
     height: 593px;
-    background-image: url("/shelter/assets/images/start-screen-puppy768.png");
+    background-image: url("/assets/images/start-screen-puppy768.png");
     margin: 0 auto;
   }
 }
@@ -850,7 +825,7 @@ body.lock {
     position: static;
     width: 569px;
     height: 593px;
-    background-image: url("/shelter/assets/images/start-screen-puppy768.png");
+    background-image: url("/assets/images/start-screen-puppy768.png");
     margin-right: 30px;
     margin-left: 169px;
   }
@@ -861,7 +836,7 @@ body.lock {
     width: 260px;
     height: 271.77px;
     margin: 0 auto;
-    background-image: url("/shelter/assets/images/start-screen-puppy320.png");
+    background-image: url("/assets/images/start-screen-puppy320.png");
   }
 }
 @media (max-width: 374px) and (min-width: 320px) {
@@ -870,7 +845,7 @@ body.lock {
     width: 260px;
     height: 271.77px;
     margin: 0 10px 0 50px;
-    background-image: url("/shelter/assets/images/start-screen-puppy320.png");
+    background-image: url("/assets/images/start-screen-puppy320.png");
   }
 }
 
@@ -879,7 +854,8 @@ body.lock {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 120px;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .about__wrapper {
@@ -899,13 +875,13 @@ body.lock {
 .about__pets {
   width: 300px;
   height: 408px;
-  background: url("/shelter/assets/images/about-pets.png");
+  background: url("/assets/images/about-pets.png");
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .about__pets {
     width: 260px;
     height: 353.6px;
-    background-image: url("/shelter/assets/images/about-pets320.png");
+    background-image: url("/assets/images/about-pets320.png");
     margin-bottom: 44px;
   }
 }
@@ -1049,7 +1025,6 @@ body.lock {
     left: 43px;
     top: 454px;
   }
-
   .right-arrow {
     position: absolute;
     bottom: 0;
@@ -1060,7 +1035,8 @@ body.lock {
   width: 1485px;
   display: flex;
   justify-content: space-evenly;
-  column-gap: 37px;
+  -moz-column-gap: 37px;
+       column-gap: 37px;
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .slider-wrapper {
@@ -1085,15 +1061,15 @@ body.lock {
   height: 270px;
 }
 .card .katrine {
-  background-image: url("/shelter/assets/images/katrine.png");
+  background-image: url("/assets/images/katrine.png");
   border-radius: 9px 9px 0px 0px;
 }
 .card .jennifer {
-  background-image: url("/shelter/assets/images/jennifer.png");
+  background-image: url("/assets/images/jennifer.png");
   border-radius: 9px 9px 0px 0px;
 }
 .card .woody {
-  background-image: url("/shelter/assets/images/woody.png");
+  background-image: url("/assets/images/woody.png");
   border-radius: 9px 9px 0px 0px;
 }
 .card .btn__pets {
@@ -1200,14 +1176,16 @@ a .btn2:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
-  column-gap: 7.4rem;
+  -moz-column-gap: 7.4rem;
+       column-gap: 7.4rem;
   row-gap: 3.3rem;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .help__list {
     width: 630px;
     justify-content: space-evenly;
-    column-gap: 4.4rem;
+    -moz-column-gap: 4.4rem;
+         column-gap: 4.4rem;
     row-gap: 3.4rem;
   }
 }
@@ -1221,7 +1199,8 @@ a .btn2:hover {
     justify-content: center;
     align-content: space-around;
     flex-wrap: wrap;
-    column-gap: 5.4rem;
+    -moz-column-gap: 5.4rem;
+         column-gap: 5.4rem;
   }
 }
 @media (max-width: 450px) and (min-width: 320px) {
@@ -1229,7 +1208,8 @@ a .btn2:hover {
     justify-content: flex-start;
     width: 290px;
     margin-top: 10px;
-    column-gap: 30px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
     row-gap: 30px;
     margin-bottom: 48px;
   }
@@ -1299,7 +1279,8 @@ a .btn2:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .donation__inner {
@@ -1317,13 +1298,13 @@ a .btn2:hover {
 .donation-img {
   width: 505px;
   height: 261px;
-  background: url("/shelter/assets/images/donation-dog.png");
+  background: url("/assets/images/donation-dog.png");
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .donation-img {
     width: 260px;
     height: 135.2px;
-    background-image: url("/shelter/assets/images/donation-dog320.png");
+    background-image: url("/assets/images/donation-dog320.png");
     margin-top: 40px;
     margin-bottom: 44px;
   }
@@ -1441,7 +1422,7 @@ a .btn2:hover {
 
 /*------------------------FOOTER---------------------------*/
 .footer {
-  background: url("/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url("/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 .footer__inner {
@@ -1450,14 +1431,16 @@ a .btn2:hover {
   position: relative;
   display: flex;
   align-items: center;
-  column-gap: 160px;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer__inner {
     flex-wrap: wrap;
     padding-top: 33px;
     padding-bottom: 0;
-    column-gap: 60px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
     justify-content: center;
     align-items: normal;
   }
@@ -1498,7 +1481,8 @@ a .btn2:hover {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 47px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .mail {
@@ -1517,7 +1501,8 @@ a .btn2:hover {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 45px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .phone {
@@ -1570,7 +1555,8 @@ a .btn2:hover {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 34px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .address1 {
@@ -1589,7 +1575,8 @@ a .btn2:hover {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 40px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 @media (max-width: 767px) and (min-width: 320px) {
   .address2 {
@@ -1611,7 +1598,7 @@ a .btn2:hover {
   right: 0;
   width: 300px;
   height: 310px;
-  background: url("/shelter/assets/images/footer-puppy.png");
+  background: url("/assets/images/footer-puppy.png");
 }
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer-puppy {
@@ -1624,7 +1611,7 @@ a .btn2:hover {
     position: static;
     width: 260px;
     height: 269px;
-    background-image: url("/shelter/assets/images/footer-puppy320.png");
+    background-image: url("/assets/images/footer-puppy320.png");
   }
 }
 
@@ -1768,7 +1755,6 @@ p.our-subtitle {
     margin-top: 173px;
     height: auto;
   }
-
   .nav__logo-pets {
     position: static;
   }
@@ -1822,7 +1808,8 @@ p.our-subtitle {
 
 .cards__container {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 30px;
   flex-wrap: wrap;
 }
@@ -1937,7 +1924,8 @@ p.our-subtitle {
 
 .modalWindow-image {
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -2023,12 +2011,10 @@ p.our-subtitle {
     max-width: 900px;
     min-width: 630px;
   }
-
   .modalWindow-about {
     min-height: 303px;
     justify-content: space-evenly;
   }
-
   .modalWindow-description {
     margin: 0;
     width: 100%;
@@ -2043,17 +2029,14 @@ p.our-subtitle {
     align-items: center;
     justify-content: center;
   }
-
   .modalWindow-card__image {
     display: none;
   }
-
   .modalWindow-about {
     width: 220px;
     margin: 0;
     gap: 0;
   }
-
   .modalWindow-description {
     font-family: Georgia;
     font-size: 13px;
@@ -2067,7 +2050,6 @@ p.our-subtitle {
     align-self: center;
     margin: 0;
   }
-
   .modalWindow-list {
     display: flex;
     flex-direction: column;
@@ -2080,7 +2062,6 @@ p.our-subtitle {
     letter-spacing: 0.06em;
     justify-content: flex-end;
   }
-
   .modalWindow-title,
 .modalWindow-subtitle {
     text-align: center;
@@ -2153,4 +2134,4 @@ p.our-subtitle {
   .footer-pets {
     padding-top: 33px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

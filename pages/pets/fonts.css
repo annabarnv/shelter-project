@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Georgia";
+  src: local("Georgia Regular"), local("Georgia-Regular"), url("Georgia.woff2") format("woff2"), url("Georgia.woff") format("woff"), url("Georgia.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: local("Arial Regular"), local("Arial-Regular"), url("ArialMT.woff2") format("woff2"), url("ArialMT.woff") format("woff"), url("ArialMT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=fonts.css.map */
